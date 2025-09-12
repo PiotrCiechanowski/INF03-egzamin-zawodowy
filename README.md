@@ -1,4 +1,3 @@
-<h1>INF03-egzaminy-zawodowe</h1>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
