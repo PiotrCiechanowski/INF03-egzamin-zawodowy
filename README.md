@@ -1,4 +1,3 @@
-# INF03-egzamin-zawodowy
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -8,7 +7,7 @@
 <body>
     <h1>INF03 – Egzaminy Zawodowe</h1>
 
-    <p>Repozytorium zawiera zadania i przykładowe rozwiązania do egzaminu zawodowego 
+<p>Repozytorium zawiera zadania i przykładowe rozwiązania do egzaminu zawodowego 
     <strong>INF.03 – Tworzenie aplikacji internetowych</strong>. Materiały obejmują m.in.:</p>
     <ul>
         <li>Bazy danych (MySQL, SQL)</li>
@@ -17,11 +16,10 @@
         <li>Przykłady projektów i ćwiczeń praktycznych</li>
     </ul>
 
-    <p>Celem repozytorium jest pomoc w nauce i przygotowaniu do egzaminu INF.03.</p>
+<p>Celem repozytorium jest pomoc w nauce i przygotowaniu do egzaminu INF.03.</p>
+<hr>
 
-    <hr>
-
-    <h2>English</h2>
+<h2>English</h2>
     <p>This repository contains exercises and sample solutions for the 
     <strong>INF.03 – Creating Web Applications</strong> vocational exam. Topics include:</p>
     <ul>
@@ -31,6 +29,6 @@
         <li>Example projects and practical exercises</li>
     </ul>
 
-    <p>The repository is designed to help students prepare for the INF.03 exam.</p>
+<p>The repository is designed to help students prepare for the INF.03 exam.</p>
 </body>
 </html>
