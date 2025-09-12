@@ -1,8 +1,8 @@
+<h1>INF03-egzaminy-zawodowe</h1>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>INF03-egzaminy-zawodowe</title>
 </head>
 <body>
     <h1>INF03 – Egzaminy Zawodowe</h1>
