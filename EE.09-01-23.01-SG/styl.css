@@ -1,0 +1,41 @@
+body{
+    font-family: Helvetica;
+    background-color: #DDD;
+    color: #546E7A;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#lewy, #prawy{
+    background-color: white;
+    height: 600px;
+    margin: 20px;
+    box-shadow: 0 0 20px gray;
+}
+#lewy{
+    flex: 1 1 50%;
+}
+#prawy{
+    flex: 1 1 30%;
+}
+footer{
+    background-color: #5C6BC0;
+    color: white;
+    padding: 30px;
+    flex: 1 1 100%;
+}
+img{
+    width: 100%;
+}
+h1{
+    background-color: #5C6BC0;
+    color: white;
+    padding: 10px;
+    font-weight: 300;
+}
+h3, p{
+    padding-left: 30px;
+}
+h2, h4{
+    text-align: center;
+}
