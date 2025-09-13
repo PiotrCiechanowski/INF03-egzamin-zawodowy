@@ -1,0 +1,4 @@
+SELECT kolor, material FROM produkt WHERE wysokosc_buta>10;
+SELECT buty.nazwa, buty.cena, kategorie.nazwa_kat FROM buty JOIN kategorie ON buty.id_kat = kategorie.id_kat;
+CREATE USER 'Marek'@'localhost' IDENTIFIED BY 'M@reK';
+GRANT SELECT, UPDATE ON obuwie.produkt TO 'Marek'@'localhsot';

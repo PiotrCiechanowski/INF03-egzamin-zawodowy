@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy komputerowe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="baner.png" alt="kursy komputerowe">
+    </header>
+    <nav id="menu">
+        <a href="index.html">Strona główna</a>
+        <a href="raty.html">Koszt rat</a>
+        <a href="https://moje-szkolenia.pl/">Nasz partner</a>
+    </nav>
+    <main>
+        <h3>Oblicz miesięczną ratę</h3>
+        <form action="raty.html" method="post" id="ratyRaty">
+            <input type="checkbox" name="KursReact" id="KursReact" Value="a">
+            <label for="KursReact">Kurs React.js</label>
+            <br>
+            <input type="checkbox" name="KursJavaScript" id="KursJavaScript" Value="b">
+            <label for="KursJavaScript">Kurs JavaScript</label>
+            <br>
+            <label for="number">Liczba rat: </label>
+            <input type="number" name="number" id="number">
+            <br>
+            <select name="lista" id="lista">
+                <option value="Warszawa">Warszawa</option>
+                <option value="Katowice">Katowice</option>
+                <option value="Gdańsk">Gdańsk</option>
+            </select>         
+            <br>
+            <input type="submit" onclick="oblicz()" value="Oblicz" id="oblicz">
+        </form>
+        <p id="wynik">wynik </p>  
+
+    </main>
+    <footer>
+        <p>Autor strony: 000000000</p>
+    </footer>
+
+    <script>
+        document.getElementById("ratyRaty").addEventListener("submit", e => {
+            e.preventDefault();
+            let kursR = document.getElementById("KursReact").checked;
+            let kursJs = document.getElementById("KursJavaScript").checked;
+            let liczba = parseInt(document.getElementById("number").value);
+            let miasto = document.getElementById("lista").value;
+            if(kursR == true && kursJs == false){
+                let rata = 5000/liczba;
+                document.getElementById("wynik").textContent = "Kurs odbędzie się w "+miasto+". Koszt całkowity: 5000 zł. Płacisz "+liczba+" rat po "+rata+" zł";
+
+            } 
+            if(kursJs == true && kursR == false){
+                let rata = 3000/liczba;
+                document.getElementById("wynik").textContent = "Kurs odbędzie się w "+miasto+". Koszt całkowity: 3000 zł. Płacisz "+liczba+" rat po "+rata+" zł";
+
+            }
+            if(kursJs == true && kursR == true){
+                let rata = 8000/liczba;
+                document.getElementById("wynik").textContent = "Kurs odbędzie się w "+miasto+". Koszt całkowity: 8000 zł. Płacisz "+liczba+" rat po "+rata+" zł";
+            }
+        });      
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body{
+    font-family: Helvetica;
+    background-color: #EAEAEA;
+}
+#menu, footer{
+    background-color: #624B5B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+ul{
+    margin-left: 40px;
+    list-style-type: circle;
+}
+#menu a{
+    font-weight: bold;
+    background-color: #EAEAEA;
+    color: #624B5B;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 20px;
+}
+#menu a:hover{
+    background-color: #624B5B;
+    color: #EAEAEA;
+    border: 1px solid #EAEAEA;
+}
+table{
+    border: 1px dashed #624B5B;
+    width: 60%;
+    margin-left: 40px;
+    text-align: center;
+}
+#kontrolki{
+    margin: 5px;
+    
+}
