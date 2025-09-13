@@ -1,0 +1,4 @@
+SELECT COUNT(id) FROM klienci;
+SELECT klienci.nazwisko, klienci.imie, zamowienia.kod_koloru, zamowienia.pojemnosc, zamowienia.data_odbioru FROM klienci INNER JOIN zamowienia ON klienci.Id = zamowienia.id ORDER BY zamowienia.data_odbioru ASC;
+SELECT klienci.nazwisko, klienci.imie, zamowienia.kod_koloru, zamowienia.pojemnosc, zamowienia.data_odbioru FROM klienci INNER JOIN zamowienia ON klienci.Id = zamowienia.id WHERE zamowienia.data_odbioru BETWEEN '2021-11-05' AND '2021-11-07' ORDER BY zamowienia.data_odbioru ASC;
+SELECT imie, Nazwisko FROM klienci WHERE Plec LIKE 'k';
