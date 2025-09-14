@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Tahoma;
+}
+#baner1, #baner2{
+    background-color: #519657;
+    color: white;
+    text-align: center;
+    height: 150px;
+}
+#baner1{
+    flex: 1 1 70%;
+}
+#baner2{
+    flex: 1 1 30%;
+}
+#lewy, #srodkowy, #prawy{
+    background-color: #E1E1E1;
+    height: 450px;
+
+}
+#prawy, #lewy{
+    flex: 1 1 25%;
+}
+#srodkowy{
+    flex: 1 1 50%;
+    overflow: auto;
+}
+footer{
+    background-color: #80C683;
+    text-align: center;
+    flex: 1 1 100%;
+}
+#obraz2{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+table{
+    border: 1px solid #80C683;
+}
+td, th{
+    padding: 2px;
+}
+tr:hover{
+    background-color: #80C683;
+}
+tr:last-child{
+    background-color: red;
+}
