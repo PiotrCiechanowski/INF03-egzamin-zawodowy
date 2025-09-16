@@ -1,0 +1,4 @@
+SELECT data FROM imieniny WHERE imiona LIKE "%Karola%";
+SELECT imiona FROM imieniny WHERE data = "05-04";
+SELECT COUNT(data) FROM imieniny WHERE imiona LIKE ("%Miron%") OR imiona LIKE ("%Dobromir%") OR imiona LIKE ("%Sędzimira%");
+ALTER TABLE kalendarz ADD zyczenia VARCHAR(500); 

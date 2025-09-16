@@ -1,0 +1,53 @@
+body{
+    font-family: serif;
+}
+footer, header{
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.napis{
+    background-color: blueviolet;
+    padding: 10px;
+    text-align: right;
+}
+.blok1, .blok3{
+    background-color: lavender;
+    height: 500px;
+}
+.blok1{
+    width: 25%;
+    float: left;
+}
+.blok3{
+    width: 35%;
+    float: left;
+}
+.blok2{
+    background-color: ghostwhite;
+    text-align: center;
+    height: 500px;
+    width: 40%;
+    float: left;
+}
+img{
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+p{
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+}
+table, form{
+    margin: 30px;
+}
+table, th, td{
+    border-collapse: collapse;
+    border: 1px solid indigo;
+}
+th, td{
+    padding: 3px;
+}
