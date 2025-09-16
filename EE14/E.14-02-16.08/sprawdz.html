@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wskaznik jakości hasła</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <main>
+        <article>
+            <header class="baner">
+                <a href="index.html"><h1>Weryfikacja jakośc hasła</h1></a>
+                
+            </header>
+            <aside class="left">
+                <h2>Wybierz opcje</h2>
+                <ul>
+                    <li><a href="sprawdz.html">Sprawdz hasło</a></li>
+                    <li><a href="reguly.html">Reguły tworzenia hasła</a></li>
+                </ul>
+            </aside>
+            <section class="right">
+                <form action="">
+                    <p>
+                        Wpisz hasło 
+                        <input type="password" id="password">
+                        <input type="submit" value="weryfikuj" id="weryfikuj" onclick="sprawdz(event)">
+                    </p>
+                </form>
+                
+                <p class="result" id="result"></p>
+                
+
+            </section>
+            <footer>
+                <h3>Wskaznik jakosci hasła</h3>
+                <p>Twórca strony: 0000000</p>
+            </footer>
+        </article>
+    </main>
+    <script>
+        function sprawdz(event){
+            event.preventDefault();
+            let pass = document.getElementById("password").value;
+            let cyfry = pass.match(/\d/g);
+            if(pass.length < 1 ){
+                document.getElementById("result").innerHTML = '<span style="color: red">HASŁO JEST PUSTE</span>';
+            } else if(pass.length > 7 && cyfry!=null){
+                document.getElementById("result").innerHTML = '<span style="color: green">HASŁO JEST DOBRE</span>';
+            } else if(pass.length > 3 && pass.length < 6 && cyfry!=null) {
+                document.getElementById("result").innerHTML = '<span style="color: blue">HASŁO JEST ŚREDNIE</span>';
+            } else{
+                document.getElementById("result").innerHTML = '<span style="color: yellow">HASŁO JEST SŁABE</span>';
+            }
+        }
+    </script>
+</body>
+</html>
