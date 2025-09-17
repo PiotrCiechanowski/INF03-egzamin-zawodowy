@@ -1,0 +1,40 @@
+body{
+    background-color: #F6E5DC;
+    font-family: Verdana;
+}
+header{
+    background-color: #3F180C;
+    text-align: center;
+    color: khaki;
+    height: 60px;
+}
+article{
+    width: 60%;
+    float: left;
+}
+section{
+    font-size: 150%;
+    padding: 70px;
+}
+aside{
+    background-color: #D0B6A8;
+    text-align: center;
+    padding: 30px;
+    clear: both;
+
+}
+footer{
+    background-color: #2F180C;
+    color: khaki;
+    height: 60px;
+}
+img{
+    height: 350px;
+}
+.przycisk{
+    margin: 10px;
+    padding: 5px;
+    background-color: #2F180C;
+    color: khaki;
+}
+
