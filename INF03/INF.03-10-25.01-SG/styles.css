@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Helvetica;
+}
+header, footer{
+    background-color: #FFD966;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 5px 5px 10px black;
+}
+header{
+    flex: 1 1 100%;
+}
+footer{
+    font-size: 120%;
+    flex: 1 1 100%;
+}
+#lewy{
+    background-color: #FFD966;
+    flex: 1 1 25%;
+    height: 450px;
+}
+#prawy{
+    background-color: #C5E0B4;
+    flex: 1 1 75%;
+    height: 450px;
+    text-align: center;
+    box-shadow: inset 0 0 15px black;
+}
+table, th, td{
+    border: 1px;
+    border-collapse: collapse;
+}
+#prawy table{
+    margin: auto;
+    flex: 1 1 70%;
+}
+ul li{
+    list-style: square;
+    line-height: 1.5;
+}
+ul, h4{
+    color:seagreen;
+}
+ul li a{
+    text-decoration: underline;
+}

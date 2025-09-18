@@ -1,0 +1,53 @@
+body{
+    font-family: serif;
+
+}
+header{
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 30px;
+    padding: 10px;
+}
+#blok1{
+    background-color: mistyrose;
+    height: 300px;
+    padding: 10px;
+    margin: 10px 50px;
+    border: 1px solid crimson;
+}
+#img1{
+    height: 100%;
+    display: block;
+    margin-right: 15px;
+    float: left;
+}
+.blok2, .blok3 {
+    float: left;
+    background-color: Snow;
+    height: 450px;
+    width: 21%;
+    margin: 1%;
+    text-align: center;
+    border: 1px solid crimson;
+}
+#blok3main{
+    clear: both;
+}
+footer{
+    background-color: crimson;
+    color: white;
+    clear: both;
+}
+img{
+    max-width: 100%;
+}
+h4{
+    font-size: 180%;
+    text-align: center;
+    color: crimson;
+}
+a{
+    color: white;
+}

@@ -1,0 +1,63 @@
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Verdana;
+}
+img{
+    display: block;
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    z-index: -1;
+}
+#baner{
+    background-color: rgb(60, 120, 160, 0.9);
+    color: white;
+    font-size: 150%;
+    padding: 10px;
+    
+}
+#lewy{
+    background-color: rgb(0, 100, 0, 0.6);
+    margin: 2%;
+    flex: 1 1 75%;
+    height: 600px;
+    font-size: 120%;
+    overflow: auto;
+    box-shadow: 10px 10px 7px dimgray;
+}
+#prawy1, #prawy2{
+    background-color: rgb(0, 100, 0, 0.6);
+    margin: 1%;
+    flex: 1 1 25%;
+    height: 300px;
+    box-shadow: 10px 10px 7px dimgray;
+}
+footer{
+    background-color: rgb(60, 120, 160, 0.9);
+    color: white;
+    padding: 10px;
+    flex: 1 1 100%;
+}
+h1, h2{
+    text-align: center;
+    font-style: italic;
+}
+dt, a{
+    color: white;
+}
+dd{
+    padding: 1px;
+}
+dd:hover{
+    background-color: lightgreen;
+}
+header{
+    flex: 1 1 100%;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

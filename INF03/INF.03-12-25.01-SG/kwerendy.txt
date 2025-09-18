@@ -1,0 +1,4 @@
+SELECT Rodzaj, Nazwa, Gramatura, Cena FROM wyroby WHERE Rodzaj="INNE";
+SELECT DISTINCT Rodzaj FROM wyroby ORDER BY Rodzaj DESC;
+SELECT ID, Nazwa FROM wyroby WHERE Nazwa LIKE "%Chałka%";
+SELECT Rodzaj, ROUND(AVG(cena), 2) AS "Średnia cena" FROM wyroby GROUP BY Rodzaj;
