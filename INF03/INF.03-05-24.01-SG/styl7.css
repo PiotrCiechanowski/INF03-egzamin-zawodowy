@@ -1,0 +1,62 @@
+*{
+    font-family: Cambria;
+}
+.lewo1, .lewo2{
+    background-color: #E1BEE7;
+    width: 25%;
+}
+.lewo1{
+    height: 400px;
+    float: left;
+
+}
+.lewo2 {
+    height: 330px;
+    float: left;
+    clear: left;
+    margin: -330px 0 0 0;  /* np. -4px albo -8px, w zależności od przerwy */
+    padding: 0;
+}
+
+.prawo1, .prawo2{
+    width: 75%;
+    font-size: 170%;
+    text-align: center;
+}
+.prawo1{
+    background-color: #9C64A6;
+    color: white;
+    height: 150px;
+    letter-spacing: 5px;
+    float: left;
+}
+.prawo2{
+    color: indigo;
+    height: 580px;
+    float: inline-start;
+
+}
+footer{
+    background-color: #9C64A6;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+h2{
+    text-align: center;
+}
+ul{
+    list-style: circle;
+}
+img{
+    padding: 4px;
+    margin: 15px;
+    
+}
+img:hover{
+    padding: 3px;
+    border: 1px dashed indigo;
+}
+a{
+    padding: 25px;
+}

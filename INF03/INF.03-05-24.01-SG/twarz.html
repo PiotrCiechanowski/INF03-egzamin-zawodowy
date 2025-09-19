@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon kosmetyczny</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <header class="lewo1">
+        <h2>Nasza oferta</h2>
+        <ol>
+            <li><a href="twarz.html">Oczyszczanie twarzy</a>
+                <ul>
+                    <li>Peeling</li>
+                    <li>Maska</li>
+                </ul>
+            </li>
+            <li>Masaż</li>
+            <li>Makijaż</li>
+        </ol>
+    </header>
+    <article class="prawo1">
+        <h1>Usługi kosmetyczne</h1>
+    </article>
+    <aside class="lewo2">
+        <img src="obraz1.jpg" alt="Personel">
+    </aside>
+    <section class="prawo2">
+    <h3>Kalkulator ceny wizyty</h3>
+    <input type="checkbox" id="Peeling">
+    <label for="Peeling">Peeling</label> <br>
+
+    <input type="checkbox" id="Maska">
+    <label for="Maska">Maska</label> <br>
+
+    <input type="checkbox" id="Masaztwarzy">
+    <label for="Masaztwarzy">Masaż twarzy</label> <br>
+
+    <input type="checkbox" id="Makijaz">
+    <label for="Makijaz">Makijaż</label><br>
+
+    <button id="przycisk">Oblicz cenę</button>
+    <p id="wynik"></p>
+</section>
+
+<footer>
+    <p>Autor: 00000</p>
+</footer>
+
+<script>
+    const przycisk = document.getElementById("przycisk");
+    const wynik = document.getElementById("wynik");
+
+    przycisk.addEventListener("click", () => {
+        let suma = 0;
+
+        if (document.getElementById("Peeling").checked) suma += 45;
+        if (document.getElementById("Maska").checked) suma += 30;
+        if (document.getElementById("Masaztwarzy").checked) suma += 20;
+        if (document.getElementById("Makijaz").checked) suma += 50;
+
+        wynik.textContent = "Cena zabiegów: " + suma;
+    });
+</script>
+
+</body>
+</html>
