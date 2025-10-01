@@ -1,0 +1,59 @@
+body{
+    font-family: Garamond;
+    color: white;
+}
+header{
+    background-color: indigo;
+    text-align: center;
+    padding: 2px;
+}
+.lewy, .prawy{
+    background-color: indigo;
+    height: 600px;
+}
+main{
+    background-color: black;
+    height: 600px;
+    overflow: auto;
+}
+@media(max-width: 800px){
+    .lewy, .prawy, main{
+        width: 100%;
+    }
+}
+@media(min-width: 801px){
+    .lewy{
+        width: 20%;
+        float: left;
+    }
+    .prawy{
+        width: 20%;
+        float: left;
+    }
+    main{
+        width: 60%;
+        float: left;
+    }
+}
+footer{
+    background-color: indigo;
+    height: 150px;
+    clear: both;
+}
+.kolor{
+    background-color: tomato;
+    border-radius: 50%;
+    padding: 5px;
+}
+li{
+    padding: 5px;
+}
+section{
+    float: left;
+    text-align: center;
+    padding: 3px;
+}
+input[type="text"]{
+    padding: 10px;
+    color: indigo;
+}
