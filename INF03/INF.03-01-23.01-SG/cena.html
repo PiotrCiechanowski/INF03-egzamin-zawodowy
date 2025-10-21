@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>malarz</title>
+    <link rel="stylesheet" href="styl_1.css">
+</head>
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+    <aside class="lewy">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="mieszamy.html">Mieszamy</a></li>
+            <li><a href="cena.html">Wyceniamy</a></li>
+        </ul>
+    </aside>
+    <main class="srodkowy">
+        <h2>Zapotrzebowanie na farbę</h2>
+        <label for="numer">Powierzchnia malowania m&sup2;</label>
+        <form action="cena.html">
+            <input type="number" name="numer" id="numer">
+            <input type="button" value="Policz" onclick="policz()">
+        </form>
+        <br>
+        <p id="wynik"></p>
+    </main>
+    <article class="prawy">
+        <img src="obraz.png" alt="Próbki farb">
+    </article>
+    <footer>
+        <h3>MALARZ</h3>
+        <p>Stronę opracował: 000000000</p>
+    </footer>
+    <script>
+        function policz(){
+            let wartosc = document.getElementById("numer").value;
+            let iloscLitrow = wartosc/4;
+            document.getElementById("wynik").innerHTML = "Liczba potrzebnych puszek: " + Math.ceil(iloscLitrow);
+            
+        }
+    </script>
+</body>
+</html>
