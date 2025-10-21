@@ -1,35 +1,38 @@
 body{
     font-family: serif;
 }
-footer, header{
+header, footer{
     background-color: indigo;
     color: white;
     padding: 10px;
     text-align: center;
 }
-.napis{
+nav{
     background-color: blueviolet;
     padding: 10px;
     text-align: right;
 }
-.blok1, .blok3{
+aside, article{
     background-color: lavender;
     height: 500px;
 }
-.blok1{
+aside{
     width: 25%;
     float: left;
-}
-.blok3{
+}   
+article{
     width: 35%;
     float: left;
 }
-.blok2{
-    background-color: ghostwhite;
+main{
+    float: left;
+    width: 40%;
     text-align: center;
     height: 500px;
-    width: 40%;
-    float: left;
+    background-color: ghostwhite;
+}
+footer{
+    clear: both;
 }
 img{
     float: right;
@@ -43,11 +46,12 @@ p{
 }
 table, form{
     margin: 30px;
+
 }
-table, th, td{
+table, td{
     border-collapse: collapse;
     border: 1px solid indigo;
 }
-th, td{
+td, th{
     padding: 3px;
 }

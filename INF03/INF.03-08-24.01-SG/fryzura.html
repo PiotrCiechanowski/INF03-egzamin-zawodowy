@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fryzjerstwo</title>
+    <link rel="stylesheet" href="styl8.css">
+</head>
+<body>
+    <header class="lewy1">
+        <h1><a href="index.html">SALON FRYZJERSKI</a></h1>
+    </header>
+    <nav class="lewy2">
+        <h2>PROMOCJA!</h2>
+        
+        <input type="radio" name="wlosy" id="krotkie" class="radio" value="krotkie">
+        <label for="krotkie">Krótkie</label>
+        <br>
+        <input type="radio" name="wlosy" id="srednie" class="radio" value="srednie">
+        <label for="srednie">Średnie</label>
+        <br>
+        <input type="radio" name="wlosy" id="poldlugie" class="radio" value="poldlugie">
+        <label for="poldlugie">Półdługie</label>
+        <br>
+        <input type="radio" name="wlosy" id="dlugie" class="radio" value="dlugie">
+        <label for="dlugie">Długie</label>
+        <br>
+        <button onclick="oblicz()">Odkryj promocję</button>
+        <p id="wynik"> wynik</p>
+        
+        
+    </nav>
+    <article class="lewy3">
+        <p>Witaj! Miło nam, że odwiedziłeś nasz salon. Sprawdź promocje!</p>
+        <h4>Kontakt: 444 555 666</h4>
+    </article>
+    <aside class="prawy1">
+        <a href="fryzura.html"><h4>Ceny strzyżenia</h4></a>
+        <table>
+            <tr>
+                <th>Długość włosów</th><th>Cena</th>
+            </tr>
+            <tr>
+                <td>Krótkie</td><td>25</td>
+            </tr>
+            <tr>
+                <td>Średnie</td><td>30</td>
+            </tr>
+            <tr>
+                <td>Półdługie</td><td>40</td>
+            </tr>
+            <tr>
+                <td>Długie</td><td>50</td>
+            </tr>
+        </table>
+    </aside>
+    <article class="prawy2">
+        <img src="obraz1.jpg" alt="„Fryzjerka">
+    </article>
+    <footer>
+        <p>Autor: </p>
+    </footer>
+
+    <script>
+        function oblicz(){
+            let radioGroup = document.querySelector('input[name="wlosy"]:checked');
+            if(radioGroup.value == "krotkie"){
+                document.querySelector("#wynik").innerHTML = "cena promocyjna: 15";
+            } else if(radioGroup.value == "srednie"){
+                document.querySelector("#wynik").innerHTML = "cena promocyjna: 20";
+            } else if(radioGroup.value == "poldlugie"){
+                document.querySelector("#wynik").innerHTML = "cena promocyjna: 30";
+            } else if(radioGroup.value == "dlugie"){
+                document.querySelector("#wynik").innerHTML = "cena promocyjna: 40";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -8,9 +8,9 @@
 </head>
 <body>
     <header>
-        <h1>Dni, miesiące, lata...</h1>
+        <h1>Dni, miesiące, lata..</h1>
     </header>
-    <section class="napis">
+    <nav>
         <?php
             $dzienMiesiac = date("m-d");
             $polaczenie = mysqli_connect('localhost', 'root', '', 'kalendarz') or die("Błąd połączenia");
@@ -35,14 +35,16 @@
             }
 
         ?>   
-    </section>
-    <section class="blok1">
+    </nav>
+    <aside>
         <table>
-            <tr>
-                <th>liczba dni</th><th>miesiac</th>
+            <tr>      
+                <th>liczba dni</th>    
+                <th>miesiąc</th>           
             </tr>
             <tr>
-                <td rowspan="7">31</td><td>styczeń</td>
+                <td rowspan="7">31</td>                
+                <td>styczeń</td>      
             </tr>
             <tr>
                 <td>marzec</td>
@@ -60,26 +62,29 @@
                 <td>pazdziernik</td>
             </tr>
             <tr>
-                <td>grudzień</td>
+                <td>grudzien</td>
             </tr>
             <tr>
-                <td rowspan="4">30</td><td>kwiecień</td>
+                <td rowspan="4">30</td>
+                <td>kwiecien</td>
             </tr>
             <tr>
                 <td>czerwiec</td>
             </tr>
             <tr>
-                <td>wrzesień</td>
+                <td>wrzesien</td>
             </tr>
             <tr>
                 <td>listopad</td>
             </tr>
             <tr>
-                <td>28 lub 29</td><td>luty</td>
+                <td>18 lub 29</td>
+                <td>luty</td>
             </tr>
+
         </table>
-    </section>
-    <section class="blok2">
+    </aside>
+    <main>
         <h2>Sprawdź kto ma urodziny</h2>
         <form action="kalendarz.php" method="post">
             <input type="date" name="data" id="date" min="2024-01-01" max="2024-12-31" value="2024-01-01" required>
@@ -96,34 +101,32 @@
                     }
                     echo "$data sa imieniny: $swieto";
                 
-                
                 }
                 mysqli_close($polaczenie);
-
             ?>
         </form>
-    </section>
-    <section class="blok3">
-        <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów"><img src="kalendarz.gif" alt="Kalendarz Majów"></a>
+    </main>
+    <article>
+        <a href="https://pl.wikipedia.org/wiki/Kalendarz_Majów"><img src="kalendarz.gif" alt="Kalendarz Majów" target="_blank" ></a>
         <h2>Rodzaje kalendarzy</h2>
         <ol>
             <li>słoneczny
                 <ul>
                     <li>kalendarz Majów</li>
-                    <li>julianski</li>
-                    <li>gregorianski</li>
+                    <li>juliański</li>
+                    <li>gregoriański</li>
                 </ul>
             </li>
-            <li>ksiezycowy
+            <li>księzycowy
                 <ul>
                     <li>starogrecki</li>
-                    <li>babilonski</li>
+                    <li>babiloński</li>
                 </ul>
             </li>
         </ol>
-    </section>
+    </article>
     <footer>
-        <p>Stronę opracował(a): 00000000</p>
+        <p>Stronę opracował(a): 000000000</p>
     </footer>
 </body>
 </html>

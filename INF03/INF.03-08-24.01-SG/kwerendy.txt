@@ -1,0 +1,4 @@
+SELECT imie, nazwisko, stanowisko FROM kadra WHERE stanowisko = "fryzjer" OR stanowisko = "stylista";
+SELECT COUNT(rodzaj), cena FROM uslugi WHERE rodzaj = 2 ORDER BY cena DESC LIMIT 1;
+SELECT uslugi.nazwa, kadra.imie FROM uslugi JOIN kadra ON uslugi.kadra_id = kadra.id WHERE rodzaj > 1;
+ALTER TABLE uslugi ADD opinia VARCHAR(255);
