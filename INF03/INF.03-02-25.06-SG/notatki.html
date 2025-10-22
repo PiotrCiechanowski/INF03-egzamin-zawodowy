@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planer zadań</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside>
+        <img src="obraz.jpg" alt="notatki">
+    </aside>
+    <section>
+        <header>
+            <h2>Moje zadania</h2>
+        </header>
+        <nav>
+            <form action="notatki.html">
+                <input type="text" name="text" id="text" placeholder="Dodaj zadanie...">
+                <input type="button" value="Dodaj" onclick="dodaj()">
+            </form>
+        </nav>
+        <main>
+            <ul>
+                <li>Wyprowadzic psa <input type="button" value="Wykonane" onclick="wykonane(this)" class="wykonane"></li>
+                <li>Gimnastyka <input type="button" value="Wykonane" onclick="wykonane(this)" class="wykonane"></li>
+                <li>Zakupy <input type="button" value="Wykonane" onclick="wykonane(this)" class="wykonane"></li>
+                <li>Spacer z kumplem <input type="button" value="Wykonane" onclick="wykonane(this)" class="wykonane"></li>
+                <li>Odrabianie lekcji z mlodsza siostra <input type="button" value="Wykonane" onclick="wykonane(this)" class="wykonane"></li>
+                <li>Projekt na geografie <input type="button" value="Wykonane" onclick="wykonane(this)" class="wykonane"></li>
+                <li id="wynik"></li>
+                
+            </ul>
+        </main> 
+        <footer>
+            <h3>Notatki: 0000000</h3>
+        </footer>
+    </section>
+    <script>
+        function wykonane(przycisk){
+            let zadanie = przycisk.parentNode;
+            zadanie.style.textDecoration = "line-through";
+        }
+
+        function dodaj(){
+            let text = document.getElementById("text").value;
+            document.getElementById("wynik").innerHTML = text + " <input type='button' value='Wykonane' onclick='wykonane(this)' class='wykonane'>";
+        }
+    </script>
+</body>
+</html>
