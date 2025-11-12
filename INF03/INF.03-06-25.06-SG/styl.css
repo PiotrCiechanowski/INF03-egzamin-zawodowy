@@ -1,0 +1,38 @@
+body{
+    font-family: Cambria;
+    background-color: mistyrose;
+}
+header, footer{
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+#s1{
+    background-color: plum;
+    height: 400px;
+    margin: 5px;
+    box-shadow: 4px 4px 10px dimgray;
+    overflow: hidden;
+    float: left;
+
+}
+@media (max-width: 800px) {
+    #s1{
+        width: 100%;
+    }
+}
+@media (min-width: 801px){
+    #s1{
+        width: 22%;
+    }
+}
+h2{
+    text-align: center;
+}
+input[type ="submit"]:hover{
+    background-color: #505050;
+    color: white;
+}
+footer{
+    clear: both;
+}
