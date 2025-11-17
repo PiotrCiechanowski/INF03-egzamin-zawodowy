@@ -1,0 +1,56 @@
+/* pozycja */
+.right, .left{
+    float: left;
+}
+footer{
+    clear: both;
+}
+
+
+/* reszta */
+body{
+    font-family: cambria;
+    text-align: center;
+}
+.baner, footer{
+    background-color: rgb(120, 0, 46);
+    color: white;
+    padding: 5px;
+    font-size: 150%;
+}
+.menu{
+    background-color: rgb(173, 20, 87);
+    text-align: left;
+}
+.left{
+    background-color: snow;
+    color: olivedrab;
+    width: 60%;
+    height: 322px;
+    text-align: left;
+}
+.right{
+    background-color: rgb(173, 20, 87);
+    width: 40%;
+    height: 322px;
+}
+.right img{
+    margin: 40px;
+    padding: 10px;
+}
+.right img:hover{
+    border: dotted 1px yellowgreen;
+}
+a{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: yellowgreen;
+}
+table, th, td{
+    border: solid 1px olivedrab;
+}
+table{
+    width: 90%;
+}

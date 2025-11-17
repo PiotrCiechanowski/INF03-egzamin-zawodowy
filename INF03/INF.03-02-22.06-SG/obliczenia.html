@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header class="baner">
+        <h1>Całodobowa stacja paliw</h1>
+    </header>
+    <nav class="menu">  
+        <a href="stacja.html"><img src="home.png" alt=""></a>
+        <a href="obliczenia.html"><img src="znak.png" alt=""></a>
+        <a href="kwerendy.txt">Pobierz dokumenty</a>
+        
+    </nav>
+    <section class="left">
+        <h2>Orientacyjny koszt paliwa</h2>
+        <form id="formularz">
+            <label for="paliwo">Rodzaj paliwa (1 - benzyna, 2 - olej napędowy):</label><br>
+            <input type="number" name="paliwo" id="paliwo">
+            <br>
+            
+            <label for="litry">Ile litrów?</label><br>
+            <input type="number" name="litry" id="litry">
+            <br>
+            
+            <input type="submit" value="OBLICZ" onclick="oblicz(event)">
+        </form>
+        <p id="wynik"></p>
+    </section>
+    <section class="right">
+        <img src="samochod.png" alt="samochód">
+    </section>
+    <footer>
+        <p>Stronę opracował: 0000000000</p>
+    </footer>
+
+    <script>
+        function oblicz(e){
+            e.preventDefault();
+            let paliwo = parseInt(document.getElementById('paliwo').value);
+            let litry = parseInt(document.getElementById('litry').value);
+            if(paliwo == 1){
+                let cena = 4;
+                let wynik1 = cena*litry;
+                document.getElementById('wynik').innerHTML = "koszt paliwa: " + wynik1 + " zł";
+            }
+            else if(paliwo == 2){
+                let cena = 3.5;
+                let wynik1 = cena*litry;
+                document.getElementById('wynik').innerHTML = "koszt paliwa: " + wynik1 + " zł";
+            }else {
+                let cena = 0;
+                let wynik1 = cena*litry;
+                document.getElementById('wynik').innerHTML = "koszt paliwa: " + wynik1 + " zł";
+            }
+            
+        }
+    </script>
+</body>
+</html>
