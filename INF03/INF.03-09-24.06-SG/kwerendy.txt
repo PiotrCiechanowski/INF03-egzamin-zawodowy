@@ -1,4 +1,4 @@
 SELECT miejsce, liczbaDni FROM wycieczki WHERE cena < 1000;
-SELECT liczbaDni, AVG(cena) AS sredniaCena FROM wycieczki GROUP BY liczbaDni;
-SELECT wycieczki.miejsce, zdjecia.nazwa FROM wycieczki INNER JOIN zdjecia ON wycieczki.id = zdjecia.Wycieczki_id WHERE wycieczki.cena > 500;
-CREATE USER 'EWA'@'localhost' IDENTIFIED BY 'Ewa!Ewa';
+SELECT liczbaDni, AVG(cena) AS 'sredniaCena' FROM wycieczki GROUP BY liczbaDni;
+SELECT wycieczki.miejsce, zdjecia.nazwa FROM wycieczki JOIN zdjecia ON wycieczki.id = zdjecia.Wycieczki_id WHERE cena > 500;
+CREATE USER 'Ewa'@'localhost' IDENTIFIED BY 'Ewa!Ewa';

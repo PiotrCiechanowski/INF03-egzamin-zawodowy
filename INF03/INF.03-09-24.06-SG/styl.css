@@ -1,32 +1,38 @@
-body{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-family: Georgia;
-    color: white;
-
+/* pozycja */
+.left, .center, .right{
+    float: left;
 }
-#baner, footer{
+nav{
+    clear: both;
+}
+footer{
+    clear: both;
+}
+/* arkusz */
+body{
+    font-family: georgia;
+    color: white;
+}
+.baner, footer{
     background-color: maroon;
     text-align: center;
     padding: 2px;
 }
-#lewy, #srodkowy, #prawy{
+.left, .center, .right{
     background-color: lightsalmon;
     height: 527px;
 }
-#lewy, #prawy{
-    flex: 1 1 15%;
+.left, .right{
+    width: 15%;
 }
-#srodkowy{
-    flex: 1 1 70%;
-    
+.center{
+    width: 70%;
 }
-#miniatury{
+nav{
     background-color: maroon;
     height: 70px;
 }
-button{
+input[type="submit"]{
     background-color: lightsalmon;
     color: maroon;
     border: none;
@@ -35,29 +41,24 @@ button{
     margin: auto;
     padding-top: 210px;
 }
-#obraz2{
+nav img{
     height: 70px;
-    animation-name: przesuwanie;
     animation-duration: 4s;
-    animation-fill-mode: forwards;
+    animation-name: animacja2;
 }
-@keyframes przesuwanie {
-    from{
-        padding-left: 50px;
-    }to{
-        padding-left: 0px;
-    }
+@keyframes animacja2{
+    from{padding-left: 50px;}
+    to{padding-left: 0px;}
 }
-#obraz_srodkowy{
+.center img{
+    display: block;
     margin: auto;
     padding-top: 45px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
-footer{
-    flex: 1 1 100%;
+.center img:hover{
+    animation: animacja1 5s forwards;
 }
-#baner{
-    flex: 1 1 100%;
+@keyframes animacja1{
+    from{transform: scale(1);}
+    to{transform: scale(1.2);}
 }

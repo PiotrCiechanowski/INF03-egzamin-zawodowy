@@ -7,32 +7,46 @@
     <link rel="stylesheet" href="styl.css">
 </head>
 <body>
-    <header id="baner">
+    <header class="baner">
         <h1>Zwiedzamy Polskę</h1>
     </header>
-    <section id="lewy">
-        <button onclick="poprzedni()"><</button>
+    <section class="left">
+        <input type="submit" value="<" id="left">
     </section>
-    <section id="srodkowy">
-        <img src="1.jpg" id="obraz_srodkowy "alt="Aktywne zdjęcie">
+    <main class="center">
+        <img src="1.jpg" alt="Aktywne zdjęcie" id="activePhoto">
+    </main>
+    <section class="right">
+        <input type="submit" value=">" id="right">
     </section>
-    <section id="prawy">
-        <button onclick="nastepny()">></button>
-    </section>
-    <section id="miniatury">
-        <img src="1.jpg" id="obraz2" alt="Gdańsk">
-        <img src="2.jpg"  id="obraz2" alt="Kraków">
-        <img src="3.jpg"  id="obraz2" alt="Niedzica">
-        <img src="4.jpg"  id="obraz2" alt="Pieniny">
-        <img src="5.jpg"  id="obraz2" alt="Szklarska Poręba">
-        <img src="6.jpg"  id="obraz2" alt="Tatry">
-        <img src="7.jpg"  id="obraz2" alt="Wrocław">
-    </section>
+    <nav class="blokMiniatur">
+        <img src="1.jpg" alt="Gdańsk">
+        <img src="2.jpg" alt="Kraków">
+        <img src="3.jpg" alt="Niedzica">
+        <img src="4.jpg" alt="Pieniny">
+        <img src="5.jpg" alt="Szklarska Poręba">
+        <img src="6.jpg" alt="Tatry">
+        <img src="7.jpg" alt="Wrocław">
+    </nav>
     <footer>
-        <h3>Autorem galerii jest: </h3>
-        <p>XXXXXX</p>
-        <a href="http://pixabay.com" target="_blank" >Więcej zdjęć</a>
+        <h3>Autorem galerii jest:</h3>
+        <p>000000000</p>
+        <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
     </footer>
-    <script src="script.js"></script>
+    
+    
+    <script>
+        let licznik = 1;
+
+        document.getElementById('right').addEventListener('click', () => {
+            licznik = (licznik % 7) + 1;
+            document.getElementById('activePhoto').src = licznik + ".jpg";
+        });
+
+        document.getElementById('left').addEventListener('click', () => {
+            licznik = licznik === 1 ? 7 : licznik - 1;
+            document.getElementById('activePhoto').src = licznik + ".jpg";
+        });
+    </script>
 </body>
 </html>
