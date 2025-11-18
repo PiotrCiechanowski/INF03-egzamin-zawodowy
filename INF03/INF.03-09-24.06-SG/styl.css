@@ -1,0 +1,64 @@
+/* pozycja */
+.left, .center, .right{
+    float: left;
+}
+nav{
+    clear: both;
+}
+footer{
+    clear: both;
+}
+/* arkusz */
+body{
+    font-family: georgia;
+    color: white;
+}
+.baner, footer{
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+.left, .center, .right{
+    background-color: lightsalmon;
+    height: 527px;
+}
+.left, .right{
+    width: 15%;
+}
+.center{
+    width: 70%;
+}
+nav{
+    background-color: maroon;
+    height: 70px;
+}
+input[type="submit"]{
+    background-color: lightsalmon;
+    color: maroon;
+    border: none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+nav img{
+    height: 70px;
+    animation-duration: 4s;
+    animation-name: animacja2;
+}
+@keyframes animacja2{
+    from{padding-left: 50px;}
+    to{padding-left: 0px;}
+}
+.center img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+}
+.center img:hover{
+    animation: animacja1 5s forwards;
+}
+@keyframes animacja1{
+    from{transform: scale(1);}
+    to{transform: scale(1.2);}
+}
