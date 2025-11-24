@@ -1,0 +1,55 @@
+header, nav, main, footer{
+    clear: both;
+}
+
+body {
+  font-family: arial;
+  background-color: blanchedalmond;
+}
+header,
+footer {
+  background-color: sienna;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-size: 130%;
+  
+}
+.lewa {
+  background-color: navajowhite;
+  margin: 10px;
+  padding: 20px;
+  width: 35%;
+  height: 400px;
+  box-shadow: 5px 5px 10px dimgray;
+  float: left;
+}
+.nawigacyjny {
+  width: 50%;
+  height: 50px;
+  float: right;
+}
+.prawa {
+  width: 50%;
+  height: 420px;
+  overflow: auto;
+  float: right;
+}
+input[type="text"],
+input[type="submit"] {
+  margin-top: 20px;
+}
+li {
+  display: inline-block;
+}
+img {
+  width: 10%;
+  float: left;
+}
+a {
+  color: sienna;
+  margin-right: 30px;
+}
+a:hover {
+  color: #4c1900;
+}

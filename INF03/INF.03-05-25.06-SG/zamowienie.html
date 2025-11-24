@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotografia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Fotografia artystyczna</h1>
+    </header>
+    <nav>
+      <img src="1.jpg" alt="obrazy do sprzedaży" title="1.jpg" />
+      <img src="2.jpg" alt="obrazy do sprzedaży" title="2.jpg" />
+      <img src="3.jpg" alt="obrazy do sprzedaży" title="3.jpg" />
+      <img src="4.jpg" alt="obrazy do sprzedaży" title="4.jpg" />
+      <img src="5.jpg" alt="obrazy do sprzedaży" title="5.jpg" />
+      <img src="6.jpg" alt="obrazy do sprzedaży" title="6.jpg" />
+      <img src="7.jpg" alt="obrazy do sprzedaży" title="7.jpg" />
+      <img src="8.jpg" alt="obrazy do sprzedaży" title="8.jpg" />
+      <img src="9.jpg" alt="obrazy do sprzedaży" title="9.jpg" />
+      <img src="10.jpg" alt="obrazy do sprzedaży" title="10.jpg" />
+    </nav>
+    <main>
+      <section class="lewa">
+        <h3>Zamówienie</h3>
+        <label for="obraz">Wybierz obraz:</label>
+        <input type="file" name="plik" id="plik" accept="image/jpeg" />
+        <br />
+        <label for="kopie">Liczba Kopii:</label>
+        <input type="number" name="kopie" id="kopie" /> <br />
+        <input
+          type="radio"
+          name="papier"
+          id="papier_blyszczacy"
+          value="blyszczacy"
+          checked
+        />
+        <label for="papier_blyszczacy">Papier błyszczący</label> <br />
+        <input type="radio" name="papier" id="papier_matowy" value="matowy" />
+        <label for="papier_matowy">Papier matowy</label> <br />
+        <input type="submit" value="Dodaj do koszyka" id="dodajKoszyk" />
+      </section>
+      <section class="nawigacyjny">
+        <ul>
+          <li><a href="regulamin.html">Regulamin</a></li>
+          <li><a href="uslugi.html">Usługi</a></li>
+          <li><a href="https://pixabay.com">Zdjęcia</a></li>
+        </ul>
+      </section>
+      <section class="prawa">
+        <h3>Koszyk</h3>
+        <section id="wynik"></section>
+      </section>
+    </main>
+    <img src="" />
+    <footer>
+      <p>
+        Autor strony: <em><i>00000000</i></em>
+      </p>
+    </footer>
+    <script>
+      document
+        .getElementById("dodajKoszyk")
+        .addEventListener("click", function () {
+          let obraz = document.getElementById("plik").files[0].name;
+          let kopie = parseFloat(document.getElementById("kopie").value);
+          let papier = document.querySelector('input[name="papier"]:checked');
+          let wynik = 0;
+
+          if (papier.value == "blyszczacy") {
+            wynik = kopie * 1.5;
+          } else if (papier.value == "matowy") {
+            wynik = kopie * 2;
+          }
+
+          document.getElementById("wynik").innerHTML +=
+            "<img src='" +
+            obraz +
+            "'>" +
+            " <br><p>Liczba kopii: " +
+            kopie +
+            " </p>" +
+            "<p> Cena: " +
+            wynik +
+            " </p>";
+        });
+    </script>
+  </body>
+</html>
