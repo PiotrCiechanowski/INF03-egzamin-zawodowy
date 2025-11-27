@@ -1,0 +1,47 @@
+body{
+    font-family: serif;
+    text-align: center;
+}
+header, footer{
+    background-color: indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    clear: both;
+}
+section{
+    width: 50%;
+    height: 470px;
+}
+.blok1, .blok3{
+    float: left;
+}
+.blok2, .blok4{
+    float: right;
+}
+
+img{
+    padding: 3px;
+    margin: 10px;
+    border: dashed 2px slateblue;
+    
+}
+a{
+    color: white;
+}
+input[type="submit"]{
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+input[type="submit"]:hover{
+    background-color: indigo;
+}
+input[type="range"]{
+    width: 80%;
+}

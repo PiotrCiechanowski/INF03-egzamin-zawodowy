@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header class="baner">
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <section class="blok1">
+        <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="pszczola1"> 
+        <br>
+        <input type="radio" name="pszczola" id="blur" value="blur">
+        <label for="blur">Blur</label> <br>
+
+        <input type="radio" name="pszczola" id="sepia" value="sepia">
+        <label for="sepia">Sepia</label> <br>
+
+        <input type="radio" name="pszczola" id="negatyw" value="negatyw">
+        <label for="negatyw">Negatyw</label> <br>
+
+        <input type="submit" value="Zastosuj" id="przycisk1"> 
+    </section>
+    <section class="blok2">
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="obrazPomarancza"> 
+        <br>
+        <input type="submit" value="Kolorowy" id="przyciskKolorowy"> 
+        <input type="submit" value="Czarno-biały" id="przyciskCzarnoBialy">
+    </section>
+    <section class="blok3">
+        <img src="owoce.jpg" alt="Kosz pełen owoców" id="obrazOwoce">
+        <input type="range" name="suwak1" id="suwak1" min="0" max="100" value="100" >
+        <br>
+        <input type="submit" value="Zastosuj" id="przycisk3">
+    </section>
+    <section class="blok4">
+        <img src="zolw.jpg" alt="Żółw w wodzie" id="obrazZolw">
+        <input type="range" name="suwak2" id="suwak2" min="0" max="250">
+        <br>
+        <input type="submit" value="Zastosuj" id="przycisk4">
+    </section>
+    <footer>
+        <p><a href="http://www.css.com/" target="_blink">Zobacz inne efekty obrazu</a></p>
+        <p>Stronę wykonał: 0000000</p>
+    </footer>
+
+    <script>
+        document.getElementById("przycisk1").addEventListener("click", function(){
+            let wybor = document.querySelector("input[name='pszczola']:checked").value;
+            console.log(wybor);
+
+            if(wybor == "blur"){
+                document.getElementById("pszczola1").style.filter = "blur(5px)";
+            }else if(wybor == "sepia"){
+                document.getElementById("pszczola1").style.filter = "sepia(100%)";
+            }else if(wybor == "negatyw"){
+                document.getElementById("pszczola1").style.filter = "invert(100%)";
+            }
+        });
+        
+        document.getElementById("przyciskKolorowy").addEventListener("click", function(){
+            document.getElementById("obrazPomarancza").style.filter = "none";
+        });
+        document.getElementById("przyciskCzarnoBialy").addEventListener("click", function(){
+            document.getElementById("obrazPomarancza").style.filter = "grayscale(1)";
+        });
+            
+
+        document.getElementById("przycisk3").addEventListener("click", function(){
+            let wartosc = parseInt(document.getElementById("suwak1").value);
+            document.getElementById("obrazOwoce").style.filter = "opacity(" + wartosc +"%)";
+        });
+        document.getElementById("przycisk4").addEventListener("click", function(){
+            let wartosc = parseInt(document.getElementById("suwak2").value);
+            document.getElementById("obrazZolw").style.filter = "brightness("+wartosc+")";
+        });
+        
+
+    </script>
+</body>
+</html>
