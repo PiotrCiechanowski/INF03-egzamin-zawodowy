@@ -1,0 +1,57 @@
+body{
+    font-family: serif;
+}
+.baner1, .baner2{
+    background-color: darkcyan;
+    color: white;
+    width: 50%;
+    height: 100px;
+    letter-spacing: 15px;
+    float: left;
+}
+footer{
+    background-color: darkcyan;
+    color: white;
+}
+.blok_karty{
+    background-color: azure;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 4px 4px 8px dimgray;
+    float: left;
+}
+.blok_karty img{
+    width: 100%;
+}
+p, h2, h3{
+    margin: 15px;
+}
+a{
+    color: white;
+}
+h5{
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+h5:hover{
+    background-color: lightseagreen;
+}
+blockquote{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    font-style: italic;
+}
+.cytat2, .cytat3{
+    display: none;
+}
+blockquote, footer{
+    clear: both;
+}
