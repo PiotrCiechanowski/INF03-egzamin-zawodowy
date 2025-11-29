@@ -1,4 +1,0 @@
-SELECT COUNT(id), pensja FROM pracownicy GROUP BY pensja ORDER BY pensja DESC;
-SELECT pracownicy.imie, pracownicy.nazwisko, stanowiska.nazwa FROM pracownicy INNER JOIN stanowiska ON pracownicy.stanowiska_id = stanowiska.id WHERE staz > 10;
-SELECT nazwisko, pensja FROM pracownicy WHERE staz BETWEEN 10 AND 20;
-ALTER TABLE stanowiska ADD minPensja INT;
