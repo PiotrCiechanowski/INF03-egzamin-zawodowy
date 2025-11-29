@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header class="baner">
+        <h1>Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em></h1>
+    </header>
+    <main class="glowny">
+        <form action="rejestracja.html" method="post">
+            <section class="blok1">
+                <h2>Dane osobowe</h2>
+                <input type="text" name="imie" id="imie" placeholder="Wpisz imię..." required>
+                <input type="text" name="nazwisko" id="nazwisko" placeholder="Wpisz nazwisko..." required>
+                <input type="submit" value="Następna karta" id="przycisk1">
+            </section>
+            <section class="blok2">
+                <h2>Dane kontaktowe</h2>
+                <input type="email" name="email" id="email" placeholder="Twój e-mail...">
+                <input type="tel" name="telefon" id="telefon" placeholder="Twój numer telefonu...">
+                <input type="submit" value="Następna karta" id="przycisk2">
+            </section>
+            <section class="blok3">
+                <h2>Hasło do logowania</h2>
+                <input type="password" name="haslo" id="haslo" placeholder="Podaj hasło">
+                <input type="password" name="haslo2" id="haslo2" placeholder="Powtórz hasło">
+                <input type="submit" value="Zatwierdź" id="przycisk3">
+            </section>
+        </form>
+    </main>
+    <footer>
+        <video src="motyl.mp4" controls>
+            Przeglądarka nie obsługuje tego formatu
+        </video>
+    </footer>
+    <footer>
+        <h3>Plan konferencji</h3>
+        <table>
+            <tr>
+                <td>9:00 - 12:00</td>
+                <td>Pielęgnacja roślin</td>
+            </tr>
+            <tr>
+                <td>13:00 - 15:00</td>
+                <td>Targi kwiatowe</td>
+            </tr>
+        </table>
+    </footer>
+    <footer>
+        <p><a href="https://kwiaty.pl/">Internetowa kwiaciarnia</a></p>
+    </footer>
+    <footer>
+        <p>Formularz wykonał: 0000000</p>
+    </footer>
+    <script>
+        document.querySelector("#przycisk1").addEventListener("click", function(e){
+            e.preventDefault();
+            document.querySelector(".blok1").style.display = 'none';
+            document.querySelector(".blok2").style.display = 'block';
+        });
+        document.querySelector("#przycisk2").addEventListener("click", function(e){
+            e.preventDefault();
+            document.querySelector(".blok2").style.display = 'none';
+            document.querySelector(".blok3").style.display = 'block';
+        });
+
+        document.querySelector("#przycisk3").addEventListener("click", function(e){
+            e.preventDefault();
+            let haslo = document.getElementById("haslo").value;
+            let haslo2 = document.getElementById("haslo2").value;
+            if(haslo !== haslo2)alert("Podane hasła różnią się");
+
+            let imie = document.getElementById("imie").value;
+            let nazwisko = document.getElementById("nazwisko").value;
+            console.log("Witaj " + imie + " " + nazwisko);
+            
+        });
+    </script>
+</body>
+</html>

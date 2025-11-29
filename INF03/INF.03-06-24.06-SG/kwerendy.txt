@@ -1,0 +1,4 @@
+SELECT imie, nazwisko, koszt FROM uczestnicy WHERE zaplacono = 0;
+SELECT AVG(koszt) AS "Średni koszt", SUM(koszt) AS "Całkowity koszt", COUNT(*) AS "Liczba uczestników" FROM `uczestnicy`;
+SELECT wyklady.nazwa, uczestnicy.nazwisko, uczestnicy.email FROM wyklady JOIN uczestnicy ON wyklady.id = uczestnicy.wyklady_id WHERE uczestnicy.zaplacono = 1;
+ALTER TABLE uczestnicy DROP COLUMN haslo;
