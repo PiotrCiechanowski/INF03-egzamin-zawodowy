@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header class="baner">
+        <h2>Chat</h2>
+    </header>
+    <aside class="blok_boczny"> 
+        <h3>Chaty</h3>
+        <ul>
+            <li>Ogólny</li>
+            <li>Tematycznie
+                <ol>
+                    <li>Turystyczny</li>
+                    <li>Zeglarski</li>
+                    <li>Filatelistyczny</li>
+                    <li>Hodowla zwierzątek domowych</li>
+                </ol>
+            </li>
+        </ul>
+        <h3>Uczestnicy</h3>
+        <p>Jolanta Nowak</p>
+        <img src="Jolka.jpg" alt="Jolanta Nowak">
+        <p>Krzysztof Łukasiński</p>
+        <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+    </aside>
+    <main class="glowny">
+        <section class="blok_chatu">
+            <section class="wypowiedz1">
+                <img src="Jolka.jpg" alt="">
+                <p>Czesc idziesz jutro do kina?</p>
+            </section>
+            <section class="wypowiedz2">
+                <img src="Krzysiek.jpg" alt="">
+                <p>Tak! A ty?</p>
+            </section>
+            <section id="nowaWiadomosc"></section>
+            <section id="wygenerowanaWiadomosc"></section>
+        </section>
+        <label for="wiadomosc">Wpisz wiadomość</label>
+        <input type="text" name="wiadomosc" id="wiadomosc">
+        <input type="submit" value="Wyślij" id="przycisk1">
+        <br>
+        <input type="submit" value="Generuj losową odpowiedź" id="przycisk2">
+    </main>
+    <footer>
+        <h5>Chat wykonał: 0000000</h5>
+    </footer>
+    <script>
+
+        let tab = ["Świetnie!",
+        "Kto gra główną rolę?",
+        "Lubisz filmy Tego reżysera?",
+        "Będę 10 minut wcześniej",
+        "Może kupimy sobie popcorn?",
+        "Ja wolę Colę",
+        "Zaproszę jeszcze Grześka",
+        "Tydzień temu też byłem w kinie na Diunie",
+        "Ja funduję bilety"]; 
+        document.getElementById("przycisk1").addEventListener("click", function(){
+            let tekst = document.getElementById("wiadomosc").value;
+            document.getElementById("nowaWiadomosc").innerHTML += "<section class='wypowiedz1'><img src='Jolka.jpg' alt=''><p>"+tekst+"</p></section>";
+        });
+        document.getElementById("przycisk2").addEventListener("click", function(){
+            const liczba = Math.floor(Math.random() * 8);
+            document.getElementById("wygenerowanaWiadomosc").innerHTML += "<section class='wypowiedz2'><img src='Krzysiek.jpg' alt=''><p>" + tab[liczba]+ "</p></section>";
+
+        });
+    </script>
+</body>
+</html>
