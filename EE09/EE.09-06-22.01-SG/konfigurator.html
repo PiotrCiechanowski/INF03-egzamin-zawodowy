@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <nav class="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła</p>
+        <input type="submit" value="Indigo" class="Indigo">
+        <input type="submit" value="SteelBlue" class="SteelBlue">
+        <input type="submit" value="Olive" class="Olive">
+        <p>Podaj kolor czcionki</p>
+        <select name="czcionka" id="czcionka">
+            <option value="White">White</option>
+            <option value="Tan">Tan</option>
+            <option value="Bisque">Bisque</option>
+            <option value="Plum">Plum</option>
+        </select>
+        <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+        <input type="text" name="rozmiar" id="rozmiar" placeholder="" value="100%" onchange="czcionka()">
+
+        <p>Czy rysunek ma mieć ramkę?</p>
+        <input type="checkbox" name="ramka" id="ramka" onchange="checkbox()" checked>
+        <label for="ramka">Rysuj ramkę</label>
+
+        <p>Jaki jest typ punktora listy?</p>
+        <input type="radio" name="radio" id="dysk" value="dysk" onchange="radio()" checked> <label for="dysk">dysk</label> <br>
+        <input type="radio" name="radio" id="kwadrat" value="kwadrat" onchange="radio()"><label for="kwadrat">kwadrat</label> <br>
+        <input type="radio" name="radio" id="okrag" value="okrag" onchange="radio()"><label for="okrag">okrąg</label> <br>
+    </nav>
+    <main class="prawy" id="prawy">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar" id="zdjecie">
+        <ul id="lista">
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </main> 
+    <footer class="stopka">
+        <p>Autor: 000000000</p>
+    </footer>
+    
+    <script>
+        document.querySelector(".Indigo").addEventListener("click", function(){
+            document.querySelector(".prawy").style.backgroundColor  = 'Indigo';
+        });
+        document.querySelector(".SteelBlue").addEventListener("click", function(){
+            document.querySelector(".prawy").style.backgroundColor  = 'SteelBlue';
+        });
+        document.querySelector(".Olive").addEventListener("click", function(){
+            document.querySelector(".prawy").style.backgroundColor  = 'Olive';
+        });
+
+        document.getElementById("czcionka").addEventListener("click", function(){
+            document.querySelector(".prawy").style.color = document.getElementById("czcionka").value;
+        }); 
+        function czcionka(){
+            document.querySelector(".prawy").style.fontSize = document.getElementById("rozmiar").value;
+        }
+
+        function checkbox(){
+            let checkbox = document.getElementById("ramka").checked;
+            console.log(checkbox); 
+            if(checkbox == true){
+                console.log("dziala"); 
+                document.getElementById("zdjecie").style.border  = '1px solid white';
+            } else if(checkbox == false){
+                console.log("nie dziala"); 
+                document.getElementById("zdjecie").style.border  = 'none';
+            }
+        }
+        function radio(){
+            const wybrany = document.querySelector('input[name="radio"]:checked');
+            console.log(wybrany.value);
+            if(wybrany == okrag){
+                document.getElementById("lista").style.listStyle = 'circle';
+            }
+            if(wybrany == kwadrat){
+                document.getElementById("lista").style.listStyle = 'square';
+            }
+            if(wybrany == dysk){
+                document.getElementById("lista").style.listStyle = 'disc';
+            }
+        }
+        
+        
+        
+
+    </script>
+</body>
+</html>
