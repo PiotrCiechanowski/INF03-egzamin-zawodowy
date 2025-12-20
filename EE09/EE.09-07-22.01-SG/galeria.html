@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <header class="baner">  
+        <h2>Galeria miejsc ciekawych</h2>
+    </header>
+    <main class="glowny">
+        <img src="lanzarotte.jpg" alt="galeria" id="glowneZdjecie">
+    </main>
+    <article class="lewy">
+        <h3>Przeglądaj zdjęcia</h3>
+        <img src="lanzarotte.jpg" alt="lanzarotte" onclick="klik('lanzarotte')">
+        <img src="pekin.jpg" alt="pekin" onclick="klik('pekin')">
+        <img src="serengeti.jpg" alt="serengeti" onclick="klik('serengeti')">
+        <img src="wenecja.jpg" alt="wenecja" onclick="klik('wenecja')">
+        <img src="tajlandia.jpg" alt="tajlandia" onclick="klik('tajlandia')">
+    </article>
+    <aside class="prawy">
+        <h3>Obrazy w naszej galerii</h3>
+        <table>
+            <tr>
+                <th>Europa</th>
+                <th>Azja</th>
+                <th>Afryka</th>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p>Polub nas <img src="icon-off.png" alt="" id="ikona1" onclick="zmiana('czarny')"> <img src="icon-on.png" alt="" style="display: none;" id="ikona2" onclick="zmiana('czerwony')"></p>
+        <a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
+    </aside>
+    <footer>
+        Autor: 00000000000
+    </footer>
+    
+    <script>            
+        function zmiana(kolor){
+            if(kolor == "czarny"){
+                document.getElementById("ikona1").style.display = "none";
+                document.getElementById("ikona2").style.display = "flex";
+            } else if(kolor == "czerwony"){
+                document.getElementById("ikona1").style.display = "flex";
+                document.getElementById("ikona2").style.display = "none";
+            }
+        }
+
+        function klik(zdjecie){
+            if(zdjecie == "pekin"){
+                document.getElementById("glowneZdjecie").src = 'pekin.jpg';
+            }
+            if(zdjecie == "lanzarotte"){
+                document.getElementById("glowneZdjecie").src = 'lanzarotte.jpg';
+            }
+            if(zdjecie == "serengeti"){
+                document.getElementById("glowneZdjecie").src = 'serengeti.jpg';
+            }
+            if(zdjecie == "wenecja"){
+                document.getElementById("glowneZdjecie").src = 'wenecja.jpg';
+            }
+            if(zdjecie == "tajlandia"){
+                document.getElementById("glowneZdjecie").src = 'tajlandia.jpg';
+            }
+        }
+
+
+    </script>
+</body>
+</html>
