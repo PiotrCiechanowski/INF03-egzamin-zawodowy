@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi fryzjerskie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header class="lewy1">
+        <a href="index.html"><h2>SALON FRYZJERSKI</h2></a>
+        <img src="obraz2.jpg" alt="Czesanie">
+    </header>
+    <aside class="prawy1">
+        <h2>MENU</h2>
+        
+    </aside>
+    <main class="prawy2">
+        <ol>
+            <li><a href="fryzura.html">Strzyżenie</a>
+                <ul>
+                    <li>krótkie</li>
+                    <li>średnie</li>
+                    <li>półdługie</li>
+                    <li>długie</li>
+                </ul>
+            </li>
+            <li>Czesanie</li>
+            <li>Koloryzacja</li>
+        </ol>
+    </main>
+    <article class="lewy2">
+        <h3>Dziś promocja na strzyżenie włosów</h3>
+        <input type="radio" name="dlugosc" id="krotkie" value="krotkie"> <label for="krotkie">Krótkie</label> <br>
+        <input type="radio" name="dlugosc" id="srednie" value="srednie"> <label for="srednie">Średnie</label> <br>
+        <input type="radio" name="dlugosc" id="poldlugie" value="poldlugie"> <label for="poldlugie">Półdługie</label> <br>
+        <input type="radio" name="dlugosc" id="dlugie" value="dlugie"> <label for="dlugie">Długie</label> <br>
+        <input type="button" value="Odkryj promocję" onclick="oblicz()">
+        <p id="wynik"></p>
+    </article>
+    <section class="prawy3">
+        <img src="obraz1.jpg" alt="Fryzjer">
+    </section>
+    <footer>
+        <p>Autor: 00000000000</p>
+    </footer>
+    <script>
+        function oblicz(){
+            let wynik = document.querySelector("input[name='dlugosc']:checked").value;
+            if(wynik == "krotkie"){
+                document.getElementById("wynik").innerHTML = 'Cena strzyżenia: ' + 25;
+            }
+            if(wynik == "srednie"){
+                document.getElementById("wynik").innerHTML = 'Cena strzyżenia: ' + 30;
+            }
+            if(wynik == "poldlugie"){
+                document.getElementById("wynik").innerHTML = 'Cena strzyżenia: ' + 40;
+            }
+            if(wynik == "dlugie"){
+                document.getElementById("wynik").innerHTML = 'Cena strzyżenia: ' + 50;
+            }
+        }
+    </script>
+</body>
+</html>
