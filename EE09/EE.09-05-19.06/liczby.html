@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciągi liczbowe</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header id="baner1">
+        <h2>Poznaj Ciągi Liczbowe</h2>
+    </header>
+    <section id="baner2">
+        <a href="liczby.html"><h5>Ciągi arytmetyczne</h5></a>
+    </section>
+    <section id="baner3">
+        <a href="fib.html"><h5>Ciąg Fibonacciego</h5></a>
+    </section>
+    <header id="baner4">
+        <img src="obraz1.png" alt="Fibonacci">
+    </header>
+    <aside class="lewy">
+        <ol>
+            <li>ciągi arytmetyczne</li>
+            <li>ciągi geometryczne</li>
+            <li>ciąg Fibonacciego</li>
+        </ol>
+    </aside>
+    <main class="prawy">
+        <h2>Generowanie ciągu arytmetycznego</h2>
+        <label for="wyrazA1">Pierwszy wyraz A1: </label><input type="number" name="wyrazA1" id="wyrazA1"> <br>
+        <label for="roznica">Różnica ciągu R: </label> <input type="number" name="roznica" id="roznica"> <br>
+        <label for="wyrazN">Liczba wyrazów w ciągu N: </label> <input type="number" name="wyrazN" id="wyrazN"> <br>
+        <input type="button" value="Generuj Ciąg" onclick="oblicz()">
+        <p id="wynik"></p>
+    </main>
+    <footer>
+        <p>Autor: 00000000000</p>
+    </footer>
+    <script>
+        function oblicz(){
+            let wyrazA1 = parseInt(document.getElementById("wyrazA1").value);
+            let roznica = parseInt(document.getElementById("roznica").value);
+            let wyrazN = parseInt(document.getElementById("wyrazN").value);
+            let suma = roznica*wyrazN + wyrazA1 - roznica;
+            document.getElementById("wynik").innerHTML = "Ciąg arytmetyczny zawiera wyrazy: "
+            for(let i = wyrazA1; i <= suma; i = i + roznica){
+                document.getElementById("wynik").innerHTML += i + ", ";
+            }
+        }
+    </script>
+</body>
+</html>
