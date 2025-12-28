@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Działania matematyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header class="baner1">
+        <img src="logo.jpg" alt="matematyka">
+    </header>
+    <header class="baner2">
+        <h1>Pomocnik Matematyczny</h1>
+    </header>
+    <header class="baner3">
+        <a href="dzialania.html"><h4>Działania</h4></a>
+    </header>
+    <header class="baner4">
+        <a href="mnozenie.html"><h4>Tabliczka mnozenia</h4></a>
+    </header>
+    <main class="lewy">
+        <h3>Proste działania</h3>
+        <label for="liczbaA">liczba A: </label> <input type="text" name="liczbaA" id="liczbaA"> <br>
+        <label for="liczbaB">liczba B: </label> <input "type="text" name="liczbaB" id="liczbaB"> <br>
+        <input type="submit" value="+" onclick="oblicz('dodawanie')">
+        <input type="submit" value="-" onclick="oblicz('odejmowanie')">
+        <input type="submit" value="*" onclick="oblicz('mnozenie')">
+        <input type="submit" value="/" onclick="oblicz('dzielenie')">
+        <input type="submit" value="A^B" onclick="oblicz('potegowanie')">
+        <p id="wynik"></p>
+    </main>
+    <aside class="prawy">
+        <ul>
+            <li>dodawanie</li>
+            <li>odejmowanie</li>
+            <li>mnozenie</li>
+            <li>dzielenie</li>
+            <li>potęgowanie</li>
+        </ul>
+    </aside>
+    <footer>
+        <p>Autor: 00000000000000</p>
+    </footer>
+    <script>
+        function oblicz(znak){
+            let liczbaA = parseInt(document.getElementById('liczbaA').value);
+            let liczbaB = parseInt(document.getElementById('liczbaB').value);
+            console.log("test");
+            if(znak == "dodawanie"){
+                let wynik = liczbaA + liczbaB;
+                document.getElementById('wynik').innerHTML = "Wynik: " + wynik;
+            }else if(znak == "odejmowanie"){
+                let wynik = liczbaA - liczbaB;
+                document.getElementById('wynik').innerHTML = "Wynik: " + wynik;
+            }else if(znak == "mnozenie"){
+                let wynik = liczbaA*liczbaB;
+                document.getElementById('wynik').innerHTML = "Wynik: " + wynik;
+            }else if(znak == "dzielenie"){
+                let wynik = liczbaA/liczbaB;
+                document.getElementById('wynik').innerHTML = "Wynik: " + wynik;
+            }else if(znak == "potegowanie"){
+                let wynik = liczbaA**liczbaB;
+                document.getElementById('wynik').innerHTML = "Wynik: " + wynik;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body{
+    font-family: tahoma;
+    color: white;
+}
+header{
+    float: left;
+}
+.baner1, .baner3, .baner4{
+    background-color: #983713;
+    width: 17%;
+    height: 100px;
+}
+.baner2{
+    background-color: #983713;
+    width: 49%;
+    height: 100px;
+    text-align: center;
+}
+.lewy{
+    background-color: #FF7F50;
+    width: 80%;
+    height: 500px;
+    float: left;
+}
+.prawy{
+    background-color: #FF7F50;
+    width: 20%;
+    height: 500px;
+    float: left;
+}
+footer{
+    background-color: #983713;
+    text-align: right;
+    clear: both;
+}
+input[type="submit"]{
+    background-color: #D3D3D3;
+    color: #2F2F2F;
+    border: 2px solid #2F2F2F;
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+input[type="text"]{
+    color: orange;
+}
