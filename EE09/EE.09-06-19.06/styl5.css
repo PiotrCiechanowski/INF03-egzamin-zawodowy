@@ -1,0 +1,35 @@
+body{
+    font-family: georgia;
+}
+header, footer{
+    background-color: sienna;
+    color: white;
+    height: 150px;
+    float: left;
+
+}
+.baner1, .stopka1{
+    width: 40%;
+}
+.baner2, .stopka2{
+    width: 50%;
+    font-size: 150%;
+}
+.baner3, .stopka3{
+    width: 10%;
+    text-align: center;
+}
+main{
+    background-color: tan;
+    padding: 100px;
+}
+a{
+    border: 1px dashed sienna;
+    background-color: tan;
+    color: sienna;
+    padding: 40px;
+    line-height: 150px;
+}
+li{
+    list-style: circle;
+}
