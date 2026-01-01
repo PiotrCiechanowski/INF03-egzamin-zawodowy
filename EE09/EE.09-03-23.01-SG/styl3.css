@@ -1,0 +1,49 @@
+body{
+    font-family: georgia;
+    background-color: aliceblue;
+}
+.baner{
+    background-color: #A00037;
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    padding: 3px;
+    clear: both;
+}
+article{
+    width: 70%;
+    float: left;
+}
+input[type="submit"]{
+    background-color: #D81B60;
+    color: white;
+    padding: 15px;
+    margin: 20px;
+    width: 100%;
+}
+section{
+    display: none;
+}
+footer{
+    background-color: #D81B60;
+    color: white;
+    width: 20%;
+    float: right;
+    padding: 5px;
+    margin: 10px;
+    box-shadow: 15px 15px 12px dimgray;
+}
+h5, blockquote{
+    font-style: italic;
+    text-align: center;
+    margin: 0px;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+table{
+    margin: auto;
+    width: 95%;
+    border: 1px solid aliceblue;
+}
