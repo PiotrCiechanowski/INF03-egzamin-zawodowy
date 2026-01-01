@@ -1,0 +1,4 @@
+SELECT nazwa, cena FROM `uslugi` WHERE cena < 30;
+SELECT SUM(cena) FROM `uslugi` WHERE rodzaj = 1;
+CREATE USER 'kosmetyczka'@'localhost' IDENTIFIED BY 'Kosmet34';
+GRANT SELECT, INSERT ON egzamin1.uslugi TO 'kosmetyczka'@'localhost';
