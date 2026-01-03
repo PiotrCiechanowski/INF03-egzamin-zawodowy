@@ -1,0 +1,34 @@
+body{
+    font-family: arial;
+}
+header, footer{
+    float: left;
+    background-color: saddlebrown;
+    color: white;
+    height: 100px;
+}
+.baner_lewy, .stopka_lewy{
+    width: 55%;
+    font-size: 120%;
+}
+.baner_srodkowy, .stopka_srodkowy{
+    width: 25%;
+}
+.baner_prawy, .stopka_prawy{
+    width: 20%;
+    text-align: right;
+}
+.glowny{
+    background-color: snow;
+    padding: 70px;
+}
+a{
+    border: 2px dotted saddlebrown;
+    background-color: snow;
+    color: saddlebrown;
+    padding: 20px;
+    line-height: 100px;
+}
+ol{
+    list-style: lower-alpha;
+}
