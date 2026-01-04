@@ -1,0 +1,37 @@
+body{
+    font-family: Helvetica;
+}
+.baner{
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.blok_formularza{
+    background-color: lightseagreen;
+    text-align: center;
+    padding: 60px;
+}
+.srodkowy, .lewy{
+    background-color: teal;
+    color: white;
+    text-align: center;
+    height: 350px;
+    width: 25%;
+    float: left;
+}
+.prawy{
+    background-color: teal;
+    height: 350px;
+    width: 50%;
+    float: left;
+}
+footer{
+    background-color: darkcyan;
+    color: white;
+    padding: 40px;
+    clear: both;
+}
+ul{
+    border: 4px dotted rgb(127, 255, 212);
+}
