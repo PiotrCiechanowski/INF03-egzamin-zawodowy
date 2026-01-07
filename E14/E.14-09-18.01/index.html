@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła ponadgimnazjalna</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header class="baner">
+        <h1>Projekt strony internetowej szkoły ponadgimnazjalnej</h1>
+    </header>
+    <main class="lewy">
+        <table>
+            <tr>
+                <th>Treść zapytania</th>
+                <th>Zrzut ekranu</th>
+            </tr>
+            <tr>
+                <td>INSERT INTO `klasa`(`id`, `nazwa`) VALUES (5,'3a');</td>
+                <td><img src="kwerenda1.jpg" alt="kwerenda1.jpg"></td>
+            </tr>
+            <tr>
+                <td>SELECT DISTINCT(id_klasy), AVG(Srednia_ocen) FROM `uczen` GROUP BY id_klasy;</td>
+                <td><img src="kwerenda2.jpg" alt="kwerenda2.jpg"></td>
+            </tr>
+            <tr>
+                <td>CREATE USER 'Dyrektor'@'localhost' IDENTIFIED BY 'dyr_123';</td>
+                <td><img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik.jpg"></td>
+            </tr>
+            <tr>
+                <td>GRANT ALL PRIVILEGES ON `szkola`.* TO 'Dyrektor'@'localhost';   </td>
+                <td><img src="uprawniena.jpg" alt="uprawniena.jpg"></td>
+            </tr>
+        </table>
+    </main>
+    <aside class="prawy">
+        <h2>Do pobrania</h2>
+        <ul>
+            <li><a href="zapytania.txt">Zapytania SQL</a></li>
+            <li><a href="szkola_nowa.sql">baza danych</a></li>
+        </ul>
+        <hr>
+        <h3>Wyznaczanie najniższej średniej</h3>
+        <ul>
+            <li>Polak <input type="text" name="polak" id="polak"></li>
+            <li>Nowak <input type="text" name="nowak" id="nowak"></li>
+            <li>Rysik <input type="text" name="rysik" id="rysik"></li>
+        </ul>
+        <input type="submit" value="wyznacz" id="przycisk">
+        <h3 id="najnizsza">Najniższa średnia:</h3>
+    </aside>
+    <footer>
+        <h3>stronę wykonał: 00000000000</h3>
+    </footer>
+    <script>
+        document.getElementById("przycisk").addEventListener("click", function(){
+            let inputPolak = document.getElementById("polak").value.trim();
+            let inputNowak = document.getElementById("nowak").value.trim();
+            let inputRysik = document.getElementById("rysik").value.trim();
+
+            if (inputPolak === "" || inputNowak === "" || inputRysik === "") {
+                alert("wpisz poprawne dane");
+                return;
+            }
+
+            let polakSrednia = parseFloat(inputPolak);
+            let nowakSrednia = parseFloat(inputNowak);
+            let rysikSrednia = parseFloat(inputRysik);
+
+            if (isNaN(polakSrednia) || isNaN(nowakSrednia) || isNaN(rysikSrednia)) {
+                alert("wpisz poprawne dane");
+                return;
+            }
+
+            let najnizsza = Math.min(polakSrednia, nowakSrednia, rysikSrednia);
+
+            document.getElementById("najnizsza").innerHTML = 
+                "Najniższa średnia: " + najnizsza;
+        });
+    </script>
+</body>
+</html>

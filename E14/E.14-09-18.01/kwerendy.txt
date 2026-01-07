@@ -1,0 +1,4 @@
+INSERT INTO `klasa`(`id`, `nazwa`) VALUES (5,'3a');
+SELECT DISTINCT(id_klasy), AVG(Srednia_ocen) FROM `uczen` GROUP BY id_klasy;
+CREATE USER 'Dyrektor'@'localhost' IDENTIFIED BY 'dyr_123';
+GRANT ALL PRIVILEGES ON `szkola`.* TO 'Dyrektor'@'localhost';   

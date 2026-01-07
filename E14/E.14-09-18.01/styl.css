@@ -1,0 +1,51 @@
+a{
+    color: yellow;
+}
+.baner, footer, .prawy{
+    background-color: #5957a1;
+}
+.lewy{
+    background-color: #bbadcd;
+    width: 65%;
+    float: left;
+}
+.baner, footer{
+    text-align: center;
+}
+.prawy{
+    text-align: center;
+    float: left;
+    width: 35%;
+}
+body{
+    font-family: arial;
+    color: white;
+}
+.baner{
+    padding: 10px;
+}
+footer{
+    clear: both;
+}
+
+.lewy, .prawy{
+    height: 450px;
+}
+.baner{
+    height: 70px;
+}
+footer{
+    height: 50px;
+}
+.prawy hr{
+    color: yellow;
+}
+ul{
+    list-style: square;
+}
+td, th, tr{
+    border: 1px dashed black;
+}
+.lewy{
+    overflow: auto;
+}
