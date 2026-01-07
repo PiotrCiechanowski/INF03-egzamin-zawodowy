@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria zdjęć</title>
+    <link rel="stylesheet" href="styl5.css">
+</head>
+<body>
+    <header class="baner">
+        <h1>Zdjęcia psów</h1>
+    </header>
+    <aside class="lewy">
+        <h2>Kategorie</h2>
+        <ul>
+            <li><a href="psy.html">Psy</a></li>
+            <li><a href="koty.html">Koty</a></li>
+            <li>Gryzonie</li>
+            <li>Jaszczurki</li>
+            <li>Inne zdjęcia</li>
+        </ul>
+        <h4><a href="index.html">Powrót do strony głównej</a></h4>
+    </aside>
+    <nav class="prawy1">
+        <h1>Wybierz zdjęcie</h1>
+        <img src="pies1.jpg" alt="pies1" onmouseout="" onmouseover="" onclick="" id="pies1">
+        <img src="pies2.jpg" alt="pies2" onmouseout="" onmouseover="" onclick="" id="pies2">
+        <img src="pies3.jpg" alt="pies3" onmouseout="" onmouseover="" onclick="" id="pies3">
+
+    </nav>
+    <main class="prawy2">
+        <p><img src="pies1.jpg" alt="pies-duży" id="piesGlowny"></p>
+    </main>
+    <footer>
+        Galerię zdjęć opracował:  <i>00000000000</i>
+    </footer>
+    <script>
+        document.getElementById("pies1").addEventListener("mouseover", function(){
+            document.getElementById("pies1").src = 'pies1-szary.jpg';
+        })
+        document.getElementById("pies1").addEventListener("mouseout", function(){
+            document.getElementById("pies1").src = 'pies1.jpg';
+        })
+        document.getElementById("pies2").addEventListener("mouseover", function(){
+            document.getElementById("pies2").src = 'pies2-szary.jpg';
+        })
+        document.getElementById("pies2").addEventListener("mouseout", function(){
+            document.getElementById("pies2").src = 'pies2.jpg';
+        })
+        document.getElementById("pies3").addEventListener("mouseover", function(){
+            document.getElementById("pies3").src = 'pies3-szary.jpg';
+        })
+        document.getElementById("pies3").addEventListener("mouseout", function(){
+            document.getElementById("pies3").src = 'pies3.jpg';
+        })
+
+        document.getElementById("pies1").addEventListener("click", function(){
+            document.getElementById("pies1").src = 'pies1.jpg';
+            document.getElementById("piesGlowny").src = 'pies1.jpg';
+
+        })
+        document.getElementById("pies2").addEventListener("click", function(){
+            document.getElementById("pies2").src = 'pies2.jpg';
+            document.getElementById("piesGlowny").src = 'pies2.jpg';
+
+        })
+        document.getElementById("pies3").addEventListener("click", function(){
+            document.getElementById("pies3").src = 'pies3.jpg';
+            document.getElementById("piesGlowny").src = 'pies3.jpg';
+
+        })
+    </script>
+</body>
+</html>

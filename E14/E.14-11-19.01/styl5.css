@@ -1,0 +1,49 @@
+body{
+    font-family: verdana;
+}
+.baner{
+    background-color: #9692B1;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+.lewy{
+    background-color: #9692B1;
+    color: white;
+    width: 20%;
+    height: 750px;
+    float: left;
+}
+.prawy1{
+    background-color: #FFF4CC;
+    width: 80%;
+    height: 300px;
+    text-align: center;
+    float: left;
+}
+.prawy2{
+    background-color: #DBCC93;
+    width: 80%;
+    height: 450px;
+    text-align: center;
+    float: left;
+}
+footer{
+    background-color: #9692B1;
+    color: white;
+    text-align: right;
+    clear: both;
+}
+a{
+    color: white;
+}
+.prawy1 img{
+    width: 15%;
+    margin: 20px;
+}
+.prawy2 img{
+    border: 4px solid #9692B1;
+}
+.prawy2 img:hover{
+    border: 4px solid gray;
+}
